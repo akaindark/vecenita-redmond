@@ -1,0 +1,48 @@
+@mixin fw300 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+@mixin fw400 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+@mixin fw500 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+@mixin fw600 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+@mixin item-list {
+  position: relative;
+  color: $white;
+  &::before {
+    content: "\f105";
+    position: absolute;
+    font-family: "icomoon";
+    color: $red;
+    display: block;
+    left: rem(10px);
+    top: rem(14px);
+  }
+}
+//Animation
+@mixin animation1 {
+  animation: element-1 5s 0.1s infinite alternate
+    cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+@mixin animation2 {
+  animation: element-1 3s 0.1s infinite alternate
+    cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+@mixin animation3 {
+  animation: element-1 4s 0.1s infinite alternate
+    cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+//responsiv
+
+@function rem($px) {
+  @return $px/16px + 0rem;
+}
