@@ -37,6 +37,11 @@
       max-width: 400px;
     }
   }
+  .feed__item {
+    margin: 30px 30px;
+    justify-content: space-around;
+    padding: 10px;
+  }
 }
 @media screen and (max-width: 1024px) {
   html {
@@ -107,10 +112,6 @@
   .btn {
     transform: scale(0.8);
   }
-  .feed__item {
-    margin: 20px 20px;
-    justify-content: space-around;
-  }
   .feed__subtitle {
     margin-bottom: 2.375rem;
   }
@@ -180,6 +181,9 @@
     }
   }
   .video {
+    &__wrap {
+      background-size: cover;
+    }
     .video-bat {
       width: 90px;
       top: 3%;
@@ -392,7 +396,7 @@
     }
     &__inner {
       grid-template-columns: 1fr;
-      grid-template-rows: 120px 410px 150px;
+      grid-template-rows: 120px 340px 150px;
     }
     &__image {
       grid-row: 2;
@@ -410,6 +414,7 @@
       grid-column: 1;
     }
     &__price {
+      max-width: 340px;
       padding-right: 70px;
       &-box {
         max-width: 370px;
@@ -435,12 +440,27 @@
       display: none;
     }
     .benefits-ghost2 {
-      bottom: 45%;
+      bottom: 50%;
       width: 70px;
       left: 75%;
     }
     .benefits-witch {
       display: none;
+    }
+  }
+  .spec {
+    .spec-witch {
+      top: 30%;
+      width: 70px;
+    }
+  }
+  .set {
+    .set-ghost2 {
+      left: 3%;
+      width: 70px;
+    }
+    &__content {
+      margin-bottom: 30px;
     }
   }
   .feed__text {
@@ -475,7 +495,7 @@
     height: 300px;
   }
   .slick-list.draggable {
-    height: 350px !important;
+    height: 150px !important;
   }
   .spec__slider {
     width: 300px;
@@ -490,7 +510,7 @@
   }
   .intro {
     &__inner {
-      grid-template-rows: 100px 320px 140px 290px 70px;
+      grid-template-rows: 100px 320px 140px 190px;
     }
     &__title {
       font-size: 24px;
@@ -552,7 +572,7 @@
   }
   .intro {
     &__inner {
-      grid-template-rows: 100px 320px 140px 290px 70px;
+      grid-template-rows: 100px 320px 140px 180px;
     }
     &__title {
       font-size: 24px;

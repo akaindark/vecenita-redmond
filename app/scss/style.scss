@@ -144,8 +144,8 @@
   &__image {
     grid-area: image;
     position: relative;
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 500px;
+    max-height: 500px;
     &-border {
       position: absolute;
       content: "";
@@ -162,7 +162,7 @@
   }
   &__title {
     grid-area: title;
-    align-self: start;
+    align-self: center;
     color: $title;
     font-weight: 400;
     margin-bottom: 0;
@@ -178,7 +178,7 @@
     justify-content: start;
   }
   &__text {
-    height: 240px;
+    height: 200px;
     padding-left: 20px;
     border-left: 4px solid $red;
   }
@@ -222,11 +222,12 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 440px;
+    max-width: 500px;
     height: 110px;
     margin: 0 auto;
     color: $white;
     position: relative;
+    z-index: 2;
     &::before {
       content: "";
       position: absolute;
@@ -325,6 +326,12 @@ button {
     max-width: 360px;
     background-color: $bg;
   }
+  &__item {
+    font-weight: 400;
+    span {
+      font-weight: 600;
+    }
+  }
   &__content {
     max-width: rem(600px);
     width: 100%;
@@ -355,15 +362,22 @@ button {
   }
   &__content {
     max-width: rem(500px);
+
     padding-left: rem(20px);
   }
   &__list {
     margin-bottom: rem(30px);
   }
+  &__item {
+    font-weight: 600;
+    span {
+      font-weight: 400;
+    }
+  }
   &__slider {
-    max-width: rem(500px);
+    max-width: rem(400px);
     img {
-      max-width: rem(500px);
+      max-width: rem(400px);
       width: 100%;
       border-radius: rem(15px);
       display: inline-block;
@@ -402,7 +416,14 @@ button {
     align-items: start;
   }
   &__content {
+    max-width: rem(500px);
     margin-top: rem(30px);
+  }
+  &__item {
+    font-weight: 600;
+    span {
+      font-weight: 400;
+    }
   }
   &__image {
     img {
@@ -423,7 +444,7 @@ button {
     width: 160px;
     left: 2%;
     top: 30%;
-    @include animation1;
+    @include animation3;
   }
   .video-witch {
     position: absolute;
@@ -444,8 +465,8 @@ button {
     height: rem(400px);
     border-radius: rem(20px);
     margin: 0 auto;
-    background-image: url(../images/dest/video-bg.jpg);
-    background-size: cover;
+    background-image: url("../images/dest/video-bg.jpg");
+    background-size: 800px auto;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
@@ -483,9 +504,10 @@ button {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: baseline;
   }
   &__item {
-    width: rem(230px);
+    width: rem(260px);
     text-align: center;
     padding: rem(20px) rem(15px);
     border-radius: rem(5px);
